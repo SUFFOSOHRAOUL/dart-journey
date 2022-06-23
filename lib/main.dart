@@ -4,15 +4,18 @@ void main() {
 }
 
 void test() {
-  const name ='raoul';
-  if (name == 'raoul')
-  {
- print('this is raoul');
-  }else if(name == 'hans'){
-    print('this is hans');
-}else{
-  print('I don\'t know this person');
-}
+ int age =20;
+ double halfOfAge=age/2;
+ print('the half of the age is:  $halfOfAge');
+ double doubleOfAge = age*2;
+ print('the double of the age is $doubleOfAge');
+ int reducedAge = age -5;
+ print('the reduced age is $reducedAge');
+ int addedAge = age +5;
+ print('the added age is $addedAge');
+  int newAge = age;
+  print('the newAge is $newAge');
+
 }
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
