@@ -1,32 +1,26 @@
 import 'package:flutter/material.dart';
-StringBuffer getFullName(var suffo) {
-  var suffo = StringBuffer();
-  suffo.write('i will like test this function');
-  suffo.write('  every morning');
-return suffo; 
-}
-
-int Addition(){
-  int a,b,sum;
-  a=10;
-  b=5;
-  sum = a+b;
-return sum;
-}
 void main() {
   runApp(const MyApp());
 }
 
+void test() {
+  const name ='raoul';
+  if (name == 'raoul')
+  {
+ print('this is raoul');
+  }else if(name == 'hans'){
+    print('this is hans');
+}else{
+  print('I don\'t know this person');
+}
+}
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
+      
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    var myFriends=['luca','ernest','dinero'];
-    print(getFullName('suffo'));
-    print(Addition()) ;
-    print(myFriends[0]);
+    test();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
