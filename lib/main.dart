@@ -4,17 +4,12 @@ void main() {
 }
 
 void test() {
- int age =20;
- double halfOfAge=age/2;
- print('the half of the age is:  $halfOfAge');
- double doubleOfAge = age*2;
- print('the double of the age is $doubleOfAge');
- int reducedAge = age -5;
- print('the reduced age is $reducedAge');
- int addedAge = age +5;
- print('the added age is $addedAge');
-  int newAge = age;
-  print('the newAge is $newAge');
+ final name =['leo', 'luca','joe','hans'];
+ print(name.length);
+  name.add('raoul');
+  print(name[2]);
+  print(name.length);
+
 
 }
 class MyApp extends StatelessWidget {
