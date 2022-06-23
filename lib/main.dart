@@ -1,6 +1,17 @@
 import 'package:flutter/material.dart';
-String getFullName(String firstName , String lastName) {
-return '$firstName $lastName'; 
+StringBuffer getFullName(var suffo) {
+  var suffo = StringBuffer();
+  suffo.write('i will like test this function');
+  suffo.write('  every morning');
+return suffo; 
+}
+
+int Addition(){
+  int a,b,sum;
+  a=10;
+  b=5;
+  sum = a+b;
+return sum;
 }
 void main() {
   runApp(const MyApp());
@@ -12,7 +23,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    print(getFullName('foo','bar'));
+    var myFriends=['luca','ernest','dinero'];
+    print(getFullName('suffo'));
+    print(Addition()) ;
+    print(myFriends[0]);
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
