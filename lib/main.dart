@@ -3,13 +3,11 @@ void main() {
   runApp(const MyApp());
 }
 
-void test(String? firstName, String? middleName, String lastName) {
+enum PersonalProperties {firstName, lastName, age}
+void test() {
   
-
- String? name = firstName;
-name ??= middleName;
-name ??= lastName;
-print(name);
+print(PersonalProperties.firstName);
+ 
   
 }
 class MyApp extends StatelessWidget {
@@ -18,7 +16,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    test(null,null,'hans');
+    test();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
