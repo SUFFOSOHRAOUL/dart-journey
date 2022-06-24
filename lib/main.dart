@@ -2,23 +2,22 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
+class person{
+  void breath(){
+    print('breathing');
+  }
+  void jump() {
+    print('jumping');
+  }
+}
 
 enum AnimalType {cat, dog, pig}
-void test(AnimalType animalType) {
+void test() {
+  final raoul = person();
+  raoul.breath();
+  raoul.jump();
   
-switch (animalType ){
-  case AnimalType.cat:
-  print('ohh i love cats');
-  break;
-  case AnimalType.dog:
-  print('i dont too love dogs');
-  break;
-  case AnimalType.pig:
-  print('pigs are dirty');
-  break;
 
-}
- print('the function is finished');
   
 }
 class MyApp extends StatelessWidget {
@@ -27,7 +26,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    test(AnimalType.cat);
+    test();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
