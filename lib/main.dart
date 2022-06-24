@@ -4,13 +4,13 @@ void main() {
 }
 
 void test() {
- final name =['leo', 'luca','joe','hans'];
- print(name.length);
-  name.add('raoul');
-  print(name[2]);
-  print(name.length);
+  const String? firstName = null;
+  const String? middleName = null;
+const String? lastName = 'raoul'; 
 
-
+const firstNonNullValue = (firstName?? middleName )?? lastName;
+print(firstNonNullValue);
+  
 }
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
