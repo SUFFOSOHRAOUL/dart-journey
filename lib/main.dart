@@ -3,23 +3,41 @@ void main() {
   runApp(const MyApp());
 }
 class person{
-  void breath(){
-    print('breathing');
-  }
-  void jump() {
-    print('jumping');
-  }
+ final String name;
+
+  person(this.name);
+  
 }
 
 enum AnimalType {cat, dog, pig}
 void test() {
-  final raoul = person();
-  raoul.breath();
-  raoul.jump();
+  final raoul = person('raoul');
   
-
+print(raoul.name);
   
 }
+
+ abstract class livingThing{
+
+  void breathing(){
+    print('i am breathing');
+  }
+  void jump(){
+    print('i am jumping');
+  }
+}
+class Cats extends livingThing{}
+
+void test2(){
+  final leo = Cats();
+  leo.breathing();
+  leo.jump();
+}
+
+
+
+
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
       
@@ -27,6 +45,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     test();
+    test2();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
