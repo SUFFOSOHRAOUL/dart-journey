@@ -2,41 +2,41 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
+
+class cat{
+  final String name;
+
+  cat(this.name);
+  
+}
+
+extension Run on cat {
+  void run(){
+     print('i am running');
+  }
+
+}
 class person{
- final String name;
+  final String firstName;
+  final String lastName;
 
-  person(this.name);
-  
-}
 
-enum AnimalType {cat, dog, pig}
+  person(this.firstName, this.lastName);
+  }
+
+  extension FullName on person{
+    String get fullName => '$firstName $lastName'; 
+  }
+
+
 void test() {
-  final raoul = person('raoul');
-  
-print(raoul.name);
-  
+  final meow = cat('meow');
+  final raoul =person('suffo', 'soh');
+  meow.run();
+  print(raoul.fullName);
+
+
 }
-
- abstract class livingThing{
-
-  void breathing(){
-    print('i am breathing');
-  }
-  void jump(){
-    print('i am jumping');
-  }
-}
-class Cats extends livingThing{}
-
-void test2(){
-  final leo = Cats();
-  leo.breathing();
-  leo.jump();
-}
-
-
-
-
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     test();
-    test2();
+    
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
