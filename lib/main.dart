@@ -2,39 +2,15 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
-
-class cat{
-  final String name;
-
-  cat(this.name);
-  
+Future<int> multiplicator(int a){
+  return Future.delayed(const Duration(seconds: 3),(){
+    return a * 2;
+  });
 }
 
-extension Run on cat {
-  void run(){
-     print('i am running');
-  }
-
-}
-class person{
-  final String firstName;
-  final String lastName;
-
-
-  person(this.firstName, this.lastName);
-  }
-
-  extension FullName on person{
-    String get fullName => '$firstName $lastName'; 
-  }
-
-
-void test() {
-  final meow = cat('meow');
-  final raoul =person('suffo', 'soh');
-  meow.run();
-  print(raoul.fullName);
-
+void test() async {
+  final results = await multiplicator(30);
+  print(results);
 
 }
 
