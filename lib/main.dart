@@ -2,16 +2,17 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
-Future<int> multiplicator(int a){
-  return Future.delayed(const Duration(seconds: 3),(){
-    return a * 2;
+Stream<String> getName() {
+  return Stream.periodic(const Duration( seconds: 2),(value){
+     return 'foo';
   });
+  
 }
 
 void test() async {
-  final results = await multiplicator(30);
-  print(results);
-
+  await for (final value in getName()){
+  print(value);
+  }
 }
 
 class MyApp extends StatelessWidget {
