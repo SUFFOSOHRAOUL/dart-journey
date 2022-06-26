@@ -3,10 +3,25 @@ void main() {
   runApp(const MyApp());
 }
 Stream<String> getName() {
-  return Stream.periodic(const Duration( seconds: 2),(value){
+  return Stream.periodic(const Duration( seconds: 3 ),(value){
      return 'foo';
   });
   
+}
+Iterable<int> getvalues() sync*{
+  yield 1;
+  yield 2;
+  yield 3;
+}
+void test2() {
+  for (final value in getvalues()){
+    print(value);
+    if (value == 2){
+    break;
+  }
+  }
+  
+
 }
 
 void test() async {
@@ -22,7 +37,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     test();
-    
+    test2();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
